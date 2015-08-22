@@ -25,7 +25,7 @@ public class Main implements IXposedHookLoadPackage {
         public void onReceive(Context context, Intent intent) {
             final String action = intent.getAction();
             if (action.equals(Intent.ACTION_USER_PRESENT)) {
-                screenon = true;
+                screenon = false;   \\with true it seems to work as it works now...
             }
             if (action.equals(Intent.ACTION_SCREEN_OFF)) {
                 screenon = false;
